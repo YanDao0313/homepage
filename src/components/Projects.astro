@@ -1,0 +1,54 @@
+---
+import Project from "./Project.astro";
+const projects = [
+  {
+    repo: "YanDao0313/nextblog",
+    desc: "My personal blog, power by Next.js, Sanity, etc.",
+    icon: "i-twemoji-bookmark",
+  },
+  {
+    repo: "YanDao0313/homepage",
+    desc: "My all-new homepage, power by astro.",
+    icon: "i-twemoji-card-file-box",
+  },
+  {
+    repo: "YanDao0313/Friends",
+    desc: "Friend links. The repo itself can automatically generate files of your friend links.",
+    icon: "i-twemoji-glowing-star",
+  },
+  {
+    repo: "YanDao0313/OICodes",
+    desc: "NOI training codes back up.",
+    icon: "i-twemoji-hammer-and-wrench",
+  },
+  {
+    repo: "YandaoGroup/daoblog.top",
+    desc: "My old personal blog, made with Gridea.",
+    icon: "i-twemoji-pencil",
+  },
+  {
+    repo: "YanDao0313/SakanaMusicPlayer",
+    desc: "⭐ Generate svg of contributors, multiple repo supported",
+    icon: "i-twemoji-musical-notes",
+  },
+];
+---
+
+<h3 class="flex items-center mt-8 mb-4 font-semibold text-2xl">
+  <span flex-1 class="outfit">💻Projects</span>
+  <a
+    href="https://github.com/YanDao0313"
+    target="_blank"
+    color-white
+    class="op-50 ml-2 hover:op-100 transition-opacity cursor-pointer"
+  >
+    <div class="m-2 i-ri-arrow-right-up-line"></div>
+  </a>
+</h3>
+<div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
+  {
+    projects.map((project) => {
+      return <Project {...project} />;
+    })
+  }
+</div>

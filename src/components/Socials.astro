@@ -1,0 +1,50 @@
+---
+import Social from "./Social.astro";
+const socials = [
+  {
+    text: "Github",
+    link: "https://github.com/YanDao0313",
+    icon: "i-ri-github-fill",
+    classes: "hover:bg-gray-700 dark:hover:bg-white dark:hover:text-gray-900",
+  },
+  {
+    text: "Blog",
+    link: "https://blog.krisyan.dev",
+    icon: "i-ri-book-2-line",
+    classes: "hover:bg-gradient-to-r from-[#d6249f] to-[#6cbff7]",
+  },
+  {
+    text: "KI",
+    link: "https://www.kronosinsight.com",
+    icon: "i-ri-newspaper-line",
+    classes: "hover:bg-gray-700 dark:hover:bg-white dark:hover:text-gray-900",
+  },
+  {
+    text: "",
+    link: "https://twitter.com/imKrisYan",
+    icon: "i-ri-twitter-fill",
+    //classes: "hover:bg-[#00ACEE]",
+    classes: "hover:bg-gray-700 dark:hover:bg-white dark:hover:text-gray-900",
+  },
+  {
+    text: "",
+    link: "mailto:i@krisyan.dev",
+    icon: "i-ri-mail-fill",
+    //classes: "hover:bg-[#00b0ff]",
+    classes: "hover:bg-gray-700 dark:hover:bg-white dark:hover:text-gray-900",
+  },
+  {
+    text: "",
+    link: "https://afdian.net/a/krisyan",
+    icon: "i-twemoji:money-bag",
+    //classes: "hover:bg-red-4",
+    classes: "hover:bg-[#00b0ff]",
+  },
+];
+---
+
+{
+  socials.map((social) => {
+    return <Social {...social} />;
+  })
+}
